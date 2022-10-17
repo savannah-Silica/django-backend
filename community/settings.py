@@ -82,7 +82,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'community.wsgi.application'
+# WSGI_APPLICATION = 'community.wsgi.application'
+
+ASGI_APPLICATION = 'community.asgi.application'
 
 
 # Database
