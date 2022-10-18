@@ -16,7 +16,7 @@ cryptography==38.0.1
 daphne==3.0.2
 Deprecated==1.2.13
 dj-rest-auth==2.2.5
-Django==4.0
+Django==4.0.7
 django-cors-headers==3.8.0
 django-mpesa==2.0.14
 django-rest-knox==4.2.0
