@@ -27,11 +27,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
+    'notification.apps.NotificationConfig',
+    'projects.apps.ProjectsConfig',
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'api.apps.ApiConfig',
-    'dj_rest_auth',  ]
+    'dj_rest_auth',  
+    ]
 
 AUTH_USER_MODEL ='api.User'
 
