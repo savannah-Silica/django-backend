@@ -100,6 +100,6 @@ After opening shell, execute the following codes to generate your random key
 
  ```bash
  >>>from django.core.management.utils import get_random_secret_key
- >>>print(get_random_secret_key)
+ >>>print(get_random_secret_key())
 ```
 <p>Copy the key generated and place it in your SECRET_KEY variable in the .env file. <em><strong>There should be no whitespace around the variable</strong></em></p>
