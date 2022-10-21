@@ -41,6 +41,7 @@ pycparser==2.21
 PyJWT==2.5.0
 pyOpenSSL==22.1.0
 pyparsing==3.0.9
+python-dotenv==0.21.0
 pytz==2021.1
 redis==4.3.4
 requests==2.28.1
