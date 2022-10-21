@@ -68,3 +68,24 @@ Open the terminal in the main directory and run
 ```bash
 python manage.py runserver
 ```
+
+## .env
+Generating your own Secret Key<br>
+
+The .env file will be hidden automatically from the repo because it should contain sensitive information of the project such as the SECRET_KEY.
+After cloning the repo go on and follow these steps:
+<ul>
+ <li>In the root directory of this Project, (<em>Inside the folder named <strong>community</strong></em>), create a file called <strong>.env</strong></li>
+ <li>After creating the file, write the following lines:</li>
+ 
+ ```bash
+1. SECRET_KEY=your_secret_key
+2. DEBUG=True
+```
+<li>This should do the trick, try running the server to check for any errors after creating your .env file</li>
+
+ ```bash
+python manage.py runserver
+```
+<li>To create a safer and more complex SECRET_KEY, you can visit <a href=https://djecrety.ir/>SECRET_KEY GENERATOR</a>, to generate your own SECRET_KEY.</li>
+</ul>
