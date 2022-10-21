@@ -70,7 +70,7 @@ python manage.py runserver
 ```
 
 ## .env
-Generating your own Secret Key<br>
+Store sensitive data in the .env file<br>
 
 The .env file will be hidden automatically from the repo because it should contain sensitive information of the project such as the SECRET_KEY.
 After cloning the repo go on and follow these steps:
@@ -87,5 +87,19 @@ After cloning the repo go on and follow these steps:
  ```bash
 python manage.py runserver
 ```
-<li>To create a safer and more complex SECRET_KEY, you can visit <a href=https://djecrety.ir/>SECRET_KEY GENERATOR</a>, to generate your own SECRET_KEY.</li>
 </ul>
+
+> ***Note*** <strong>Generating Your Own SECRET_KEY</strong>
+<p>To generate a new key, use the get_random_secret_key() function present in the django.core.management.utils that returns a 50 character string of random characters.
+You can open the python shell by typing this command first to execute the get_random_secret_key</p>
+
+ ```bash
+python manage.py shell
+```
+After opening shell, execute the following codes to generate your random key
+
+ ```bash
+ >>>from django.core.management.utils import get_random_secret_key
+ >>>print(get_random_secret_key())
+```
+<p>Copy the key generated and place it in your SECRET_KEY variable in the .env file. <em><strong>There should be no whitespace around the variable</strong></em></p>
