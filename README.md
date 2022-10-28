@@ -96,7 +96,7 @@ You can open the python shell by typing this command first to execute the get_ra
  ```bash
 python manage.py shell
 ```
-After opening shell, execute the following codes to generate your random key
+After opening shell, execute the following code to generate your random key
 
  ```bash
  >>>from django.core.management.utils import get_random_secret_key
