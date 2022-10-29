@@ -32,10 +32,13 @@ Contributions, issues and feature requests are always welcome!
 - For example ``git checkout -b symon-kipkemei``
 
 **4. Make necessary changes and commit those changes**
-- You can now ammend/contribute/make changes in reference to the issue you were assigned and then save the file
+- You can now create/modify files in the code repository in reference to the issue you were assigned.
+- Save the file.
 - On executing the command ``git status``, you'll see there are changes.
-- Add those changes to the branch you just created using the ``git add`` command: ``git add <the file you created or ammended>``
-- Now commit those changes using the ``git commit`` command:``git commit -m "a description of the changes made``
+- Add those changes to the branch you just created using the ``git add`` command:
+- ``git add <the file you created or ammended>``
+- Now commit those changes using the ``git commit`` command:
+- ``git commit -m "a description of the contribution made``
 
 
 **5. Push changes to GitHub**
@@ -46,6 +49,9 @@ Contributions, issues and feature requests are always welcome!
 **6. Submit your changes for review**
 - If you go to your repository on GitHub, you’ll see a Compare & pull request button. 
 - Click on that button.
-- Write a comment on the changes made.
+- Write a comment on the contributions made.
 - click create pull request button
 - You will get a notification email once the changes have been merged
+
+**You did it!**
+- You now have what it takes to my your contributions! Clap for yourself !!👏👏👏
