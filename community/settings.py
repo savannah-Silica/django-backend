@@ -1,9 +1,12 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import environ
+env = environ.Env()
+environ.Env.read_env()
 
-
-
+# Your secret key
+SECRET_KEY = env("SECRET_KEY")
 
 load_dotenv()
 
@@ -105,8 +108,12 @@ ASGI_APPLICATION = 'community.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
     }
 }
 
