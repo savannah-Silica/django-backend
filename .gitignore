@@ -3,7 +3,6 @@
 *vscode
 *json
 *.pyc
-__pycache__
-db.sqlite3
-/env
-django-postgres/env/bin/Activate.ps1
+*__pycache__
+*db.sqlite3
+*/env

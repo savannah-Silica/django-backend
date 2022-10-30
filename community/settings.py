@@ -1,12 +1,9 @@
 from pathlib import Path
 import os
-from dotenv import load_dotenv, find_dotenv
+import dotenv
+from dotenv import load_dotenv
+
 import psycopg2
-
-
-
-# Your secret key
-SECRET_KEY = env("SECRET_KEY")
 
 load_dotenv(find_dotenv())
 
@@ -17,12 +14,12 @@ connection = psycopg2.connect(
     port = os.getenv("DATABASE_PORT"),                                          
     database = os.getenv("DATABASE_NAME")                                       
 )                                                                               
-
+                                                                                
 cursor = connection.cursor()                                                    
 cursor.execute("SELECT version();")                                             
 record = cursor.fetchone()                                                      
-
-print(f"Database Version: {record}") 
+                                                                                
+print(f"Database Version: {record}")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,12 +119,8 @@ ASGI_APPLICATION = 'community.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
