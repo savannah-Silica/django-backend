@@ -9,7 +9,9 @@
 
 ## Collaboration
 Please contribute to the repo.<br>
-> Create an issue before cloning and later on creating a pull request.<br>
+See: [contributions.md](https://github.com/savannah-Silica/django-backend/blob/main/contributions.md)
+
+Make sure to go through the document before collaboration
 
 
 ## Set Up , Install & Run
