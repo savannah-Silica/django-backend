@@ -28,8 +28,9 @@ Contributions, issues and feature requests are always welcome!
 
 **3. Create a branch**
 - Change to the repository directory on your computer (if you are not already there): ```cd django-backend```
-- Now create a branch using the ``git checkout`` command: ``git checkout -b <add-your-name>``
-- For example ``git checkout -b symon-kipkemei``
+- Now create a branch using the ``git checkout`` command: ``git checkout -b <issue-title_number>``
+- For example ``git checkout -b contributions_#16``
+- Note the branch needs to show issue title and number
 
 **4. Make necessary changes and commit those changes**
 - You can now create/modify files in the code repository in reference to the issue you were assigned.
@@ -43,8 +44,8 @@ Contributions, issues and feature requests are always welcome!
 
 **5. Push changes to GitHub**
 - Push your changes using the command ``git push``:
-- ``git push origin <add-your-name>``
-- (replacing < add-your-name > with the name of the branch you created earlier.)
+- ``git push origin <issue-title_number>``
+- (replacing < issue-title_number > with the name of the branch you created earlier.)
 
 **6. Submit your changes for review**
 - If you go to your repository on GitHub, you’ll see a Compare & pull request button. 
