@@ -9,7 +9,9 @@
 
 ## Collaboration
 Please contribute to the repo.<br>
-> Create an issue before cloning and later on creating a pull request.<br>
+See: [contributions.md](https://github.com/savannah-Silica/django-backend/blob/main/contributions.md)
+
+Make sure to go through the document before collaboration
 
 
 ## Set Up , Install & Run
@@ -96,7 +98,7 @@ You can open the python shell by typing this command first to execute the get_ra
  ```bash
 python manage.py shell
 ```
-After opening shell, execute the following codes to generate your random key
+After opening shell, execute the following code to generate your random key
 
  ```bash
  >>>from django.core.management.utils import get_random_secret_key
