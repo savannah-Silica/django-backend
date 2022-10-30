@@ -1,14 +1,28 @@
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-import environ
-env = environ.Env()
-environ.Env.read_env()
+from dotenv import load_dotenv, find_dotenv
+import psycopg2
+
+
 
 # Your secret key
 SECRET_KEY = env("SECRET_KEY")
 
-load_dotenv()
+load_dotenv(find_dotenv())
+
+connection = psycopg2.connect(                                                  
+    user = os.getenv("DATABASE_USERNAME"),                                      
+    password = os.getenv("DATABASE_PASSWORD"),                                  
+    host = os.getenv("DATABASE_IP"),                                            
+    port = os.getenv("DATABASE_PORT"),                                          
+    database = os.getenv("DATABASE_NAME")                                       
+)                                                                               
+
+cursor = connection.cursor()                                                    
+cursor.execute("SELECT version();")                                             
+record = cursor.fetchone()                                                      
+
+print(f"Database Version: {record}") 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
