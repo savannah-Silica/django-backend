@@ -26,11 +26,7 @@ jobs:
       POSTGRES_HOST: localhost # default host value for the database
       POSTGRES_DB: djtesting
       POSTGRES_PORT: 5432
-<<<<<<< HEAD
-      DJANGO_SECRET_KEY: 'ay7$^12&0)etb4ps!74pqxprnf@euqo8k)g+$g&zv_gi%=gvhv'
-=======
       DJANGO_SECRET_KEY: ay7$^12&0)etb4ps!74pqxprnf@euqo8k)g+$g&zv_gi%=gvhv
->>>>>>> d361814 (Complete workflow Action)
     services:
       postgres_main:
         image: postgres:12
