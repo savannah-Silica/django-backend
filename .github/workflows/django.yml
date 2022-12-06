@@ -38,7 +38,7 @@ jobs:
       - name: Run Tests
         env:
           DEBUG: "0"
-          DJANGO_SECRET_KEY: 'l(9oq((vnjxe!lixxmp8o#fbtvihq08u1*a9+ka=$)=c5eb1sf'
+          DJANGO_SECRET_KEY: l(9oq((vnjxe!lixxmp8o#fbtvihq08u1*a9+ka=$)=c5eb1sf
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: djtesting
