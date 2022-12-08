@@ -19,7 +19,7 @@ jobs:
         env:
           POSTGRES_USER: "postgres"
           POSTGRES_PASSWORD: "postgres"
-          POSTGRES_DB: "djtesting"
+          POSTGRES_DB: "djtestci"
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
@@ -37,14 +37,14 @@ jobs:
       - name: Install requirements
         run: |
           pip install -r requirements.txt
-      # - name: Run Tests
-      #   env:
-      #     DEBUG: "0"
-      #     # Django secret key
-      #     SECRET_KEY: "l(9oq((vnjxe!lixxmp8o#fbtvihq08u1*a9+ka=$)=c5eb1sf"
-      #     POSTGRES_USER: "postgres"
-      #     POSTGRES_PASSWORD: "postgres"
-      #     POSTGRES_DB: "djtesting"
-      #     POSTGRES_PORT: 5432
-      #   run: |
-      #     python manage.py test --traceback
+     - name: Run Tests
+        env:
+          DEBUG: "0"
+          # Django secret key
+          SECRET_KEY: "l(9oq((vnjxe!lixxmp8o#fbtvihq08u1*a9+ka=$)=c5eb1sf"
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: "postgres"
+          POSTGRES_DB: djtestci
+          POSTGRES_PORT: 5432
+        run: |
+          python manage.py test --traceback
