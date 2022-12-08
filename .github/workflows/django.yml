@@ -11,7 +11,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
+  # The type of runner that the job will run on
     runs-on: ubuntu-latest
     services:
       postgres_main:
@@ -37,7 +37,7 @@ jobs:
       - name: Install requirements
         run: |
           pip install -r requirements.txt
-     - name: Run Tests
+      - name: Run Tests
         env:
           DEBUG: "0"
           # Django secret key
