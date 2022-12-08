@@ -44,7 +44,7 @@ jobs:
           SECRET_KEY: "l(9oq((vnjxe!lixxmp8o#fbtvihq08u1*a9+ka=$)=c5eb1sf"
           POSTGRES_USER: "postgres"
           POSTGRES_PASSWORD: "postgres"
-          POSTGRES_DB: djtestci
+          POSTGRES_DB: 'djtestci'
           POSTGRES_PORT: 5432
         run: |
           python manage.py test --traceback
