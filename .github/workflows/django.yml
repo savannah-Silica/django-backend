@@ -5,8 +5,12 @@ name: CI Django & Postgres Tests
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
-  push:
-
+ pull_request:
+    branches:
+      - main
+  # any code pushed to master and develop branch will also be a trigger
+ push:
+    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -38,13 +42,8 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Run Tests
-        env:
-          DEBUG: "0"
-          # Django secret key
-          SECRET_KEY: "l(9oq((vnjxe!lixxmp8o#fbtvihq08u1*a9+ka=$)=c5eb1sf"
-          POSTGRES_USER: "postgres"
-          POSTGRES_PASSWORD: "postgres"
-          POSTGRES_DB: str(djtestci)
-          POSTGRES_PORT: 5432
-        run: |
-          python manage.py test --traceback
+        uses: c-py/action-dotenv-to-setenv@v4
+        with:
+           env:
+            echo "{name}={value}" workflow commands to $GITHUB_ENV.
+            
