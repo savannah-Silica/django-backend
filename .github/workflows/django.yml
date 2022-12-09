@@ -42,8 +42,13 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Run Tests
-        uses: c-py/action-dotenv-to-setenv@v4
-        with:
-           env:
-            echo "{name}={value}" workflow commands to $GITHUB_ENV.
+        env:
+          DEBUG: "0"
+          SECRET_KEY: CI_CD_TEST_KEY
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: djtesting
+          POSTGRES_PORT: 5432
+        run: |
+          python manage.py test
             
