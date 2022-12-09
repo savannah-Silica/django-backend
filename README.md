@@ -1,5 +1,6 @@
 # Django implementation of the community's backend.
 
+[![CI Django & Postgres Tests](https://github.com/JimmyTron/django-backend/actions/workflows/django-postgres-ci.yml/badge.svg)](https://github.com/JimmyTron/django-backend/actions/workflows/django-postgres-ci.yml)
 ## It implements a simple authentication using dj-rest-auth.
  Github authentication to be added later.<br>
  check the [api/urls.py](https://github.com/savannah-Silica/django-backend/blob/main/api/urls.py) files for authentication api path
