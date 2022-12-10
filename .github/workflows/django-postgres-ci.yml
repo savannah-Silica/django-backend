@@ -50,5 +50,5 @@ jobs:
           POSTGRES_DB: DB_NAME
           POSTGRES_PORT: 5432
         run: |
-          python manage.py test --trackback
+          python manage.py test --traceback
             
