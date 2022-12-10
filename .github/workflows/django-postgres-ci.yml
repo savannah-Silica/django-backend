@@ -44,7 +44,7 @@ jobs:
       - name: Run Tests
         env:
           DEBUG: "0"
-          SECRET_KEY: CI_CD_TEST_KEY
+          SECRET_KEY: DJ_SECRET_KEY
           POSTGRES_USER: DB_USER
           POSTGRES_PASSWORD: DB_PASSWORD
           POSTGRES_DB: DB_NAME
