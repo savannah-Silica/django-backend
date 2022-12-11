@@ -15,17 +15,18 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+
   # The type of runner that the job will run on
     runs-on: ubuntu-latest
     services:
-          postgres_main:
+      postgres_main:
         image: postgres:12
         env:
-          POSTGRES_USER: ${{ secrets.DB_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          POSTGRES_DB: ${{ secrets.DB_NAME}}
+          POSTGRES_USER: DB_USER
+          POSTGRES_PASSWORD: DB_PASSWORD
+          POSTGRES_DB: DB_NAME
         ports:
-          - 5432:5432
+          - 5432:5432        
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
