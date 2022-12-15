@@ -27,3 +27,4 @@ psycopg2  ##the PostgreSQL database adapter for Python
 python-dotenv ##Python-dotenv reads key-value pairs from a .env file and can set them as environment variables
 
 dj-rest-auth ##Drop-in API endpoints for handling authentication securely in Django Rest Framework
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
