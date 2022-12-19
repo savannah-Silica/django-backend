@@ -28,6 +28,9 @@ python-dotenv ##Python-dotenv reads key-value pairs from a .env file and can set
 
 dj-rest-auth ##Drop-in API endpoints for handling authentication securely in Django Rest Framework
 
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+
+
 pytest==7.2.0  
 
 pytest-cov==4.0.0
@@ -35,3 +38,4 @@ pytest-cov==4.0.0
 pytest-django==4.5.2
 
 pytest-factoryboy==2.5.1
+
