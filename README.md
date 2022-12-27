@@ -1,5 +1,10 @@
 # Django implementation of the community's backend.
 
+![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+
+![postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ## It implements a simple authentication using dj-rest-auth.
  Github authentication to be added later.<br>
  check the [api/urls.py](https://github.com/savannah-Silica/django-backend/blob/main/api/urls.py) files for authentication api path
