@@ -60,6 +60,12 @@ REST_FRAMEWORK = {
       'rest_framework.authentication.BasicAuthentication',
   ),
 }
+REST_FRAMEWORK = {
+	'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+	'PAGE_SIZE': 2,
+}
+
+
 
 REST_USE_JWT = True
 JWT_AUTH_COOKIE = 'my-app-auth'

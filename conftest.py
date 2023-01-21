@@ -21,9 +21,9 @@ def django_db_setup():
     from django.conf import settings
     settings.DATABASES['default'] = {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django',
-        'USER': 'emmanuel',
-        'PASSWORD': 'password',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }

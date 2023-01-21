@@ -4,6 +4,7 @@ from .models import Project
 from.serializers import ProjectSerializer
 from rest_framework import status
 from rest_framework.response import Response
+from projects.pagination import StandardResultsSetPagination
 
 # Create your views here.
 
@@ -44,7 +45,9 @@ def ListView(request):
     
     if request.method == 'GET':
         projects = Project.objects.all()
-        serializer = ProjectSerializer(projects, many=True)
+        paginator = StandardResultsSetPagination()
+        result_page = paginator.paginate_queryset(projects, request)
+        serializer = ProjectSerializer(result_page, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
