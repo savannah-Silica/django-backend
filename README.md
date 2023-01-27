@@ -88,7 +88,11 @@ After cloning the repo go on and follow these steps:
  ```bash
 1. SECRET_KEY=your_secret_key
 2. DEBUG=True
+3. DB_NAME=<>
+4. DB_USER=<>
+5. DB_PASSWORD=<>
 ```
+<li>You can refer to the .env-sample in the community folder</li>
 <li>This should do the trick, try running the server to check for any errors after creating your .env file</li>
 
  ```bash
