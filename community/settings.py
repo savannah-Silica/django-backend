@@ -24,7 +24,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -36,14 +36,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base.apps.BaseConfig',
     'notification.apps.NotificationConfig',
     'projects.apps.ProjectsConfig',
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'api.apps.ApiConfig',
-    'dj_rest_auth',  
+    'dj_rest_auth',
+    'channels',
     ]
 
 AUTH_USER_MODEL ='api.User'
@@ -99,7 +99,7 @@ TEMPLATES = [
 
 # WSGI_APPLICATION = 'community.wsgi.application'
 
-ASGI_APPLICATION = 'community.asgi.application'
+ASGI_APPLICATION = 'community.routing.application'
 
 
 # Database
@@ -114,6 +114,15 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432'
     }
+}
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
 }
 
 

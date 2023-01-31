@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title> Test Template </title>
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <h1> Home </h1>
+
+
+    <a href="{% url 'notifications-test' %}" target="_blank"><button>Click Here to open notifications test page</button></a>
+
+
+
+
+
+
+<!-- Notification Web Socket -->
+    <script>
+    var loc = window.location
+    var wsStart = "ws://"
+    if (loc.protocol == "https:"){
+        wsStart = "wss://"
+    }
+    var webSocketEndpoint =  wsStart + loc.host + '/notifications/'  // ws : wss   // Websocket URL, Same on as mentioned in the routing.py
+
+
+    var socket = new WebSocket(webSocketEndpoint) // Creating a new Web Socket Connection
+
+    // Socket On receive message Functionality
+    socket.onmessage = function(e){
+        console.log('message', e)
+        $("body").append("<h3>"+e.data+"</h3>")
+        // Can write any functionality based on our requirement
+
+    }
+
+    // Socket Connet Functionality
+    socket.onopen = function(e){
+        console.log('open', e)
+    }
+
+    // Socket Error Functionality
+    socket.onerror = function(e){
+        console.log('error', e)
+    }
+
+    // Socket close Functionality
+    socket.onclose = function(e){
+        console.log('closed', e)
+    }
+    </script>
+
+
+    </body>
+</html>
