@@ -1,4 +1,4 @@
-# Django implementation of the community's backend.
+# Django implementation of the Savannah Silica Techies community's backend.
 
 ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
 
