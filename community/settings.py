@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'api.apps.ApiConfig',
-    'dj_rest_auth',  
+    'dj_rest_auth', 
+    'django_filters', 
     ]
 
 AUTH_USER_MODEL ='api.User'
