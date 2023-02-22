@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'api.apps.ApiConfig',
-    'dj_rest_auth',  
+    'dj_rest_auth', 
+    'django_filters', 
     ]
 
 AUTH_USER_MODEL ='api.User'
@@ -59,6 +60,8 @@ REST_FRAMEWORK = {
       'rest_framework.authentication.SessionAuthentication',
       'rest_framework.authentication.BasicAuthentication',
   ),
+  'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+  'PAGE SIZE': 5
 }
 
 REST_USE_JWT = True
@@ -157,3 +160,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+    
