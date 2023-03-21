@@ -114,3 +114,8 @@ After opening shell, execute the following code to generate your random key
  >>>print(get_random_secret_key())
 ```
 <p>Copy the key generated and place it in your SECRET_KEY variable in the .env file. <em><strong>There should be no whitespace around the variable</strong></em></p>
+
+
+
+# Contributors 
+[![Contributors](https://contrib.rocks/image?repo=savannah-Silica/django-backend)](https://github.com/savannah-Silica/django-backend/graphs/contributors)
