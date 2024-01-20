@@ -55,7 +55,7 @@ service-identity==21.1.0
 simplejson==3.18.1
 six==1.16.0
 sqlparse==0.4.4
-Twisted==22.10.0
+Twisted==23.10.0
 txaio==23.1.1
 typing_extensions==4.4.0
 tzdata==2022.6
